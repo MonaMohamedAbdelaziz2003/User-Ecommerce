@@ -1,0 +1,24 @@
+<div class="box mt-5">
+    <div class="my-2 select col-md-3 col-sm-12 ">
+        <label for="" class="cat"> Categories: </label>
+        <select name="" id="" (change)="filltercategory($event)">
+          <option value="all" selected>All</option>
+          <option value="{{cat}}" *ngFor=" let cat of categories[0] ;let i=index">{{cat}}</option>
+        </select>
+    </div>
+</div>
+<div class="all_pro" *ngIf="!spinner">
+    <div class="product" *ngFor=" let pro of product[0] ;let i=index">
+        <app-product [data]="pro" (item)="addtocard($event)"></app-product>
+    </div>
+    <!-- admin -->
+    <!-- <div class="product" *ngFor=" let pro of newproduct[0] ;let i=index">
+        {{pro}}
+        <app-product [data]="pro" (item)="addtocard($event)"></app-product>
+    </div> -->
+</div>
+<div class="text-center" *ngIf="spinner">
+    <app-spinner></app-spinner>
+</div>
+<img src="C:\\fakepath\\IMG-20221106-WA0098.jpg" alt="">
+<div>

@@ -1,0 +1,32 @@
+    .product {
+        margin: 10px;
+        width: 200px;
+        img {
+            position: relative;
+            width: 100%;
+            height: 240px;
+        }
+        div h4 {
+            padding: 10px;
+            color: #00000082;
+            font-size: 15px;
+        }
+        button {
+            border: none;
+            padding: 5px 10px;
+            color: white;
+            background: #3f51b5;
+            font-weight: bold;
+        }
+    }
+
+    .add {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .add2 {
+        input {
+            width: 100%;
+        }
+    }

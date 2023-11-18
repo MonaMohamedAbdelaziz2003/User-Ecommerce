@@ -1,0 +1,27 @@
+<div class="box" *ngIf="!loading">
+    <div class=" all-det">
+        <div>
+            <img src="{{data[0].image}}" alt="">
+        </div>
+        <div>
+            <ul>
+                <li><strong>title :</strong> {{data[0].title}}</li>
+                <li><strong>category : </strong>{{data[0].category}}</li>
+                <li><strong>description : </strong>{{data[0].description}}</li>
+                <li><strong>rate : </strong>{{data[0].rating.rate}}</li>
+                <li><strong>count : </strong>{{data[0].rating.count}}</li>
+                <li><strong>price : </strong>{{data[0].price}}</li>
+            </ul>
+            <!-- admin -->
+            <!-- <ul *ngIf="test==1">
+                <li><strong>title :</strong> {{data[0].title}}</li>
+                <li><strong>category : </strong>{{data[0].category}}</li>
+                <li><strong>description : </strong>{{data[0].description}}</li>
+                <li><strong>rate : </strong>{{data[0].rating.rate}}</li>
+                <li><strong>count : </strong>{{data[0].rating.count}}</li>
+                <li><strong>price : </strong>{{data[0].price}}</li>
+            </ul> -->
+        </div>
+    </div>
+</div>
+<app-spinner *ngIf="loading"></app-spinner>

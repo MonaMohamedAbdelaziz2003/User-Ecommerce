@@ -1,0 +1,18 @@
+<div class="product">
+    <div routerLink="/details/{{data.id}}">
+        <!--  (click)="detailsPro()" -->
+        <img src="{{data.image}}" alt=" ">
+        <!-- <img src="{{data.img}}" alt=" "> -->
+    </div>
+    <div class="body">
+        <h4>{{data.title}}</h4>
+    </div>
+    <div class="px-3 add mb-2 d-flex justify-content-between align-item-center ">
+        <span class="p-2">{{data.price}}L.E</span>
+        <button (click)="check=!check" *ngIf="!check">add to cart</button>
+        <div class="d-flex add2" *ngIf="check">
+            <input type="number" [(ngModel)]="amount">
+            <button (click)="add();check=!check;amount=0">add</button>
+        </div>
+    </div>
+</div>

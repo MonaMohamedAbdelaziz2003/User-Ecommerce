@@ -1,0 +1,27 @@
+<div class="signup">
+    <form class="" (submit)="getsignup()" [formGroup]="signup">
+        <div class="">
+            <input type="text" placeholder="Full Name" formControlName="name">
+        </div>
+        <div class="">
+            <input type="nuber" placeholder="Phone Number" formControlName="phone">
+        </div>
+        <div class="">
+            <input type="text" placeholder="Address" formControlName="address">
+        </div>
+        <div class="">
+            <input type="email" placeholder="Email" formControlName="email">
+        </div>
+        <div class=" ">
+            <input type="password" placeholder="password" formControlName="password">
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+        <div>
+            <p>If you already have an shopping account,
+                <a routerLink="/login"> sign in</a>
+            </p>
+        </div>
+    </form>
+</div>

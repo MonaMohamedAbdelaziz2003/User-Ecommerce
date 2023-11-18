@@ -1,0 +1,33 @@
+<div class="all-item">
+    <div>
+        <h4><strong>Totle : </strong>{{this.total}}</h4>
+    </div>
+    <div *ngFor="let cart of cardproduct;let index=index">
+        <div class="rowr mt-10">
+            <img [src]="cart.item.image" alt="">
+            <p>{{cart.item.title}}</p>
+            <p>{{cart.item.price}}</p>
+            <div class="d-flex align-center">
+                <button (click)="add(index)" class="count">+</button>
+                <input (change)="detectchange()" type="number" [(ngModel)]="cart.quantity" min="1">
+                <button (click)="mins(index)" class="count">-</button>
+            </div>
+            <p>totle:{{cart.item.price*cart.quantity}}</p>
+            <button (click)="delete(index)">delete</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="this.total==0" style="text-align: center; color:red">
+    <h1>You didn't buy any product so far </h1>
+</div>
+<div class="send" *ngIf="this.total!=0">
+    <div class="d-flex ff">
+        <button (click)="addtocard()">order now</button>
+        <div *ngIf="success">
+            <p *ngIf="this.total"> Order Success...</p>
+        </div>
+    </div>
+    <div>
+        <button (click)="clearall()">clear all data</button>
+    </div>
+</div>

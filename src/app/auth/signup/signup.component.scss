@@ -1,0 +1,22 @@
+            .signup {
+                display: flex;
+                justify-content: center;
+                margin-top: 100px;
+                box-shadow: 1px 1px 30px 1px #00000045;
+                padding: 30px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    input {
+                        width: 300px;
+                        padding: 10px 20px;
+                    }
+                    input[type=submit] {
+                        border: none;
+                        color: white;
+                        font-weight: bold;
+                        background-color: #3f51b5;
+                    }
+                }
+            }

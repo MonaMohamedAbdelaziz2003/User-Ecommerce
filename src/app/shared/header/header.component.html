@@ -1,0 +1,17 @@
+<nav>
+    <div class=" header container ">
+        <div>
+            <h1 class="logo">SHOPPING</h1>
+        </div>
+        <div class="icon" (click)="show()" style="cursor: pointer;">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+        <ul class="ul" id="ul">
+            <li routerLink="/">product</li>
+            <li routerLink="/card">cart</li>
+            <li routerLink="/login">login</li>
+            <li (click)="logout()">logout</li>
+            <li routerLink="/profile">profile</li>
+        </ul>
+    </div>
+</nav>

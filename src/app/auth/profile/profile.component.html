@@ -1,0 +1,31 @@
+<div class="profile">
+    <div class="cont">
+        <h4>Your Profile</h4>
+        <form action="" (submit)="update()" [formGroup]="profile">
+            <div>
+                <p>Name :</p>
+                <input type="text" formControlName="name">
+            </div>
+            <div>
+                <p>ِAddress :</p>
+                <input type="text" formControlName="address">
+            </div>
+            <div>
+                <p>phone :</p>
+                <input type="text" formControlName="phone">
+            </div>
+            <div>
+                <p>Email :</p>
+                <input type="text" formControlName="email">
+            </div>
+            <div>
+                <p>Password :</p>
+                <input type="password" readonly formControlName="password">
+            </div>
+            <div>
+                <button>Save Change</button>
+                <button (click)="change()">Change Password</button>
+            </div>
+        </form>
+    </div>
+</div>
